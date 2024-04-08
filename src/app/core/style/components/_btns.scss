@@ -1,4 +1,7 @@
 .main__btn {
+  @media (min-width: 767px) {
+    width: 25%;
+  }
   /* Layout */
   display: inline-flex;
   justify-content: center;

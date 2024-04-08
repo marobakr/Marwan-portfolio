@@ -3,11 +3,24 @@
 @import "placeholders";
 
 .resume {
-  &__pdf pdf-viewer {
-    /* Box Model */
+  pdf-viewer {
     width: 100%;
-    /* Here ther was a abug and use obser brakpoints      ❓❓❓❓❓❓❓❓ */
-    min-height: 160vh;
+    min-height: 140vh;
+    @media (max-width: 576px) {
+      min-height: 60vh;
+    }
+    @media (min-width: 577px) {
+      min-height: 70vh;
+    }
+    @media (min-width: 768px) {
+      min-height: 85vh;
+    }
+    @media (min-width: 922px) {
+      min-height: 110vh;
+    }
+    @media (min-width: 1200px) {
+      min-height: 140vh;
+    }
   }
   &__bulets span {
     /* Layout */
