@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "variables";
+@import "keyframes";
+@import "btns";
+@import "placeholders";
+
+body {
+  /* Text */
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* main color for each span have class main-color */
+.popular__main__color {
+  /* Color */
+  color: $popular-color;
+}
+
+.popular__main__bg {
+  /* Color */
+  background-color: #623686;
+
+  /* Other */
+  transition: $main-animation;
+
+  &:hover {
+    /* Color */
+    background-color: #6d20c5d7;
+  }
+}
+.typed-cursor {
+  /* Text */
+  font-size: 2.2rem;
+
+  /* Color */
+  color: #c95bf5;
+}
+
+.container {
+  /* Positioning */
+  position: relative;
+
+  /* Other */
+  z-index: 2;
+}

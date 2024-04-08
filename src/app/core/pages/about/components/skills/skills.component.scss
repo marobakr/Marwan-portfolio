@@ -1,0 +1,34 @@
+@import "variables";
+
+.about__skills {
+  .icon {
+    /* Box Model */
+    padding: 30px;
+    border: 1px solid #c573e6e1;
+
+    /* Other */
+    transition: $main-animation;
+    svg {
+      /* Box Model */
+      width: 100px;
+      height: 100px;
+      path {
+        /* Other */
+        transition: $main-animation;
+      }
+    }
+
+    &:hover {
+      /* Box Model */
+      border: 2.5px solid #c573e6e1;
+
+      /* Other */
+      transform: $scale-animation;
+
+      svg {
+        /* Text */
+        font-size: 72px;
+      }
+    }
+  }
+}

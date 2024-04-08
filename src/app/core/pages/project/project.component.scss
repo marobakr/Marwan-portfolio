@@ -1,0 +1,27 @@
+@import "variables";
+@import "mainThemes";
+@import "placeholders";
+
+.projects {
+  &__card {
+    /* Box Model */
+    min-height: 650px;
+    box-shadow: 0 4px 9px 4px rgba(119, 53, 136, 0.459);
+
+    /* Other */
+    opacity: 0.9;
+    transition: $main-animation;
+
+    &:hover {
+      /* Positioning */
+      transform: $scale-animation;
+
+      /* Other */
+      opacity: 1;
+    }
+  }
+  &__discription {
+    /* Layout */
+    text-align: justify;
+  }
+}

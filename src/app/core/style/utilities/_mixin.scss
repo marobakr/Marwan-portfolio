@@ -1,0 +1,8 @@
+@mixin pseudo-element {
+  /* Positioning */
+  position: absolute;
+  inset: 0;
+
+  content: "";
+  /* Other */
+}

@@ -1,0 +1,64 @@
+@import "variables";
+
+.landing {
+  /* Box Model */
+  min-height: 70vh;
+
+  /* Color */
+  background : {
+    image: url("../../../../../../assets/home-bg.jpg");
+    position: top;
+    size: cover;
+  }
+
+  /* Other */
+  z-index: 1;
+
+  &::before {
+    @include pseudo-element;
+    /* Position */
+    top: 0;
+
+    /* Other */
+    z-index: -1;
+
+    /* Color */
+    background-image: linear-gradient(
+      to left,
+      rgba(17, 16, 16, 0.582),
+      rgba(12, 8, 24, 0.904)
+    );
+  }
+  /**
+  * add big padding in small media queries
+  *1 BoxModel
+*/
+  @media (max-width: 767px) {
+    &-pt {
+      padding-top: 150px; /* BoxModel */ /* 1 */
+    }
+  }
+
+  .heading {
+    &-color {
+      /* Color */
+      color: $secondary-color;
+    }
+  }
+
+  &__wave {
+    /* Layout */
+    display: inline-block;
+
+    /* Positioning  */
+    transform-origin: 70% 70%;
+
+    /* Other */
+    animation: wave-animation 2.1s infinite ease-in-out;
+  }
+  &__type {
+    /* Text */
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+}

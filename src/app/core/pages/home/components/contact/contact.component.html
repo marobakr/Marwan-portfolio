@@ -1,0 +1,95 @@
+<section class="contact">
+  <div class="container pt-5">
+    <div class="row gy-3">
+      <div class="col-md-8">
+        <app-maintitle [popular]="'INTRODUCE'">
+          <span class="before text-capitalize">LET ME </span>
+          <span class="after text-capitalize">MYSELF </span>
+        </app-maintitle>
+
+        <div class="contact__info">
+          <p class="mb-5 text-white">
+            I fell in love with programming and I have at least learnt
+            something, I think… 🤷‍♂️
+          </p>
+          <p class="mb-5 text-white">
+            I am fluent in classics like
+            <span class="popular__main__color">C++, Javascript, c#</span>
+          </p>
+          <p class="mb-5 text-white">
+            My field of Interest's are building new
+            <span class="popular__main__color"
+              >Web Technologies and Products</span
+            >
+
+            and also in areas <br />
+            related to <span class="popular__main__color">Blockchain</span>.
+          </p>
+          <p class="mb-5 text-white">
+            Whenever possible, I also apply my passion for developing products
+            with
+            <span class="popular__main__color">ASP.NET</span> and
+            <span class="popular__main__color">Modern</span> <br />
+            <span class="popular__main__color">
+              Javascript Library and Frameworks</span
+            >
+            like
+            <span class="popular__main__color">React.js and angular +2</span>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="contact__reflection">
+          <a
+            *ngFor="let item of reflection"
+            class="reflection-grid-cell reflection-grid-cell-{{ item + 1 }}"
+          ></a>
+          <figure class="w-75 ms-auto reflection-content">
+            <img
+              class="w-100 img-thumbnail rounded-5"
+              src="./assets/marwan-abubakr.JPG"
+              alt="marwan abubakr"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="contact__getme text-center">
+      <h2 class="h1 text-white mb-3">FIND ME ON</h2>
+      <p class="mb-3 text-white fw-medium">
+        Feel free to <span class="popular__main__color">connect</span> with me
+      </p>
+      <div class="icons d-flex justify-content-center align-items-center gap-4">
+        <span class="bg-white d-flex align-items-center justify-content-center">
+          <a
+            href="https://www.facebook.com/profile.php?id=100093257703015"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </span>
+
+        <span class="bg-white d-flex align-items-center justify-content-center">
+          <a href="weaite" target="_blank">
+            <i class="fa-brands fa-behance"></i>
+          </a>
+        </span>
+
+        <span class="bg-white d-flex align-items-center justify-content-center">
+          <a
+            href="https://www.linkedin.com/in/marwan-abubakr-2b504528a"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"> </i>
+          </a>
+        </span>
+
+        <span class="bg-white d-flex align-items-center justify-content-center">
+          <a href="https://marobakr.com" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,83 @@
+@import "variables";
+@import "mainThemes";
+
+.contact {
+  /* Color */
+  background-image: linear-gradient(
+    to left,
+    rgb(27 20 41),
+    rgb(20 15 35)
+  ) !important;
+
+  &__info {
+    /* Text */
+    font: {
+      size: 20px;
+      weight: 700;
+      style: italic;
+    }
+  }
+  &__info p {
+    /* Text */
+
+    font: {
+      weight: 600;
+    }
+  }
+  &__getme {
+    span {
+      /* Box Model */
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    i {
+      /* Color */
+      color: $border-color;
+      /* Text */
+      font-size: 25px;
+    }
+  }
+
+  &__reflection {
+    /* 3D Animations */
+    perspective: 1000px;
+
+    .reflection-content {
+      /* Other */
+      transition: 100ms linear transform;
+    }
+
+    .reflection-grid-cell {
+      /* Positiong */
+      position: absolute;
+
+      /* Box Model */
+      width: 10%;
+      height: 10%;
+
+      /* Other */
+      z-index: 1;
+    }
+    @for $r from 1 to 11 {
+      @for $c from 1 to 11 {
+        .reflection-grid-cell-#{( ($r*10) + $c - 10)} {
+          /* Positioing */
+          top: ($r * 10%)-10%;
+          left: ($c * 10%)-10%;
+        }
+
+        .reflection-grid-cell-#{( ($r*10) + $c - 10)}:hover
+          ~ .reflection-content {
+          /* Positioing */
+          transform: rotateX((($r * -5)+25deg)) rotateY((-25deg+ ($c * 5)));
+
+          &:before {
+            /* Positioing */
+            transform: translateY(25-(5% * $r));
+          }
+        }
+      }
+    }
+  }
+}

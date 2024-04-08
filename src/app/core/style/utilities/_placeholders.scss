@@ -1,0 +1,13 @@
+@import "variables";
+
+.main-fonts {
+  /* Text */
+  font: {
+    size: $main-font;
+    weight: $main-weight;
+  }
+}
+.projects__active {
+  /* Color */
+  background-color: $primary-color;
+}

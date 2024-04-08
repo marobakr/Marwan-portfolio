@@ -1,0 +1,111 @@
+@import "variables";
+@import "mixin";
+
+.navbar {
+  /* Box Model */
+  padding: {
+    top: 10px;
+    bottom: 10px;
+  }
+
+  /* Other */
+  transition: $main-animation;
+
+  &__img-logo img {
+    /* Other */
+    transition: $main-animation;
+  }
+
+  &.scrolling {
+    /* Box Model */
+    padding: {
+      top: 5px;
+      bottom: 5px;
+    }
+    box-shadow: 0 10px 10px 0 #0f0b18ad;
+
+    /* Color */
+    background-color: $section-background-color;
+
+    img {
+      /* Box Model */
+      width: 75% !important;
+    }
+  }
+
+  /**
+ * Helper class add bg in mopile media insted of transparent
+ * 1.Color
+ */
+  @media (max-width: 768px) {
+    /* Color */
+    background-color: $section-background-color; /* 1 */
+  }
+
+  /* Other */
+  z-index: 999;
+
+  &__img-logo {
+    /* Box Model */
+    width: 50px;
+  }
+
+  &__links {
+    li {
+      /* Positioning */
+      position: relative;
+
+      /* Text */
+      font-size: 20px;
+
+      /* Other */
+      cursor: pointer;
+      transition: $main-animation;
+
+      /* helper not add psudo class at icons item  */
+      &:not(.icons)::before {
+        /* Positioning */
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        /* Box Model */
+        height: 0px;
+
+        /* Other */
+        content: "";
+        background-color: $alternate-color;
+        transition: $main-animation;
+        z-index: -1;
+      }
+
+      &:hover {
+        &::before {
+          /* Positioning */
+          top: 0;
+
+          /* Box Model */
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &.link-active::before {
+        /* Box Model */
+        width: 100%;
+        z-index: -1;
+        height: 100% !important;
+        top: 0;
+      }
+    }
+  }
+
+  &-bg {
+    /* Box Model */
+    border: 2px solid $border-color;
+
+    /* Color */
+    background-color: $alternate-color;
+  }
+}

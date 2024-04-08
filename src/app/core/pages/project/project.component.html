@@ -1,0 +1,130 @@
+<section class="projects">
+  <div class="container">
+    <div class="mb-5">
+      <app-maintitle [popular]="'works'" class="mb-0">
+        <span class="before text-capitalize">my recent </span>
+      </app-maintitle>
+      <p class="text-center text-white">
+        Here are a few projects I've worked on recently.
+      </p>
+    </div>
+
+    <div class="row g-5">
+      <!-- filteration Buttons -->
+      <div class="d-flex justify-content-center gap-3 pt-4 flex-wrap">
+        <button
+          (click)="fillter('all')"
+          [ngClass]="{ projects__active: all }"
+          class="btn fw-semibold main__btn text-white text-capitalize"
+        >
+          all
+        </button>
+        <button
+          (click)="fillter('landing')"
+          [ngClass]="{ projects__active: landing }"
+          class="btn fw-semibold main__btn text-white text-capitalize"
+        >
+          landing padge
+        </button>
+        <button
+          (click)="fillter('pure')"
+          [ngClass]="{ projects__active: pure }"
+          class="btn fw-semibold main__btn text-white text-capitalize"
+        >
+          pure javascript
+        </button>
+        <button
+          (click)="fillter('jquery')"
+          [ngClass]="{ projects__active: jquery }"
+          class="btn fw-semibold main__btn text-white text-capitalize"
+        >
+          jquery
+        </button>
+        <button
+          (click)="fillter('frameworks')"
+          [ngClass]="{ projects__active: frameworks }"
+          class="btn fw-semibold main__btn text-white text-capitalize"
+        >
+          frameworks
+        </button>
+        <button
+          (click)="fillter('crude')"
+          [ngClass]="{ projects__active: crude }"
+          class="btn fw-semibold main__btn text-white text-capitalize"
+        >
+          Crude
+        </button>
+      </div>
+      <h4 class="text-white">
+        <span class="popular__main__color">{{ lengthProjects }} </span>
+        Projects
+        <span class="popular__main__color"> found </span>
+      </h4>
+      <div
+        class="col-md-6 col-lg-4"
+        *ngFor="let project of allProjects"
+        role="button"
+      >
+        <!-- Cart Project -->
+        <div class="projects__card text-white rounded-4">
+          <!-- Header Project -->
+          <div class="card__header p-3">
+            <figure class="w-100">
+              <img
+                class="w-100 bg-transparent border-0 rounded-2"
+                src="{{ project.image }}"
+                alt="project-1"
+              />
+            </figure>
+          </div>
+
+          <!-- Info Project -->
+          <div class="card__footer p-3">
+            <h5 class="text-center popular__main__color text-capitalize">
+              {{ project.name }}
+            </h5>
+            <!-- Technologies Uses -->
+            <div class="projects__languages mb-4">
+              <h5>Technologies</h5>
+              <div class="Technologies">
+                <p
+                  class="fw-light mb-0 d-inline-block px-1"
+                  *ngFor="let language of project.languages"
+                >
+                  {{ language }}
+                </p>
+              </div>
+            </div>
+            <!-- discription  -->
+            <div class="discription mb-4">
+              <h5 class="text-center text-capitalize">discription</h5>
+              <p class="projects__discription mb-3">
+                {{ project.discription.split("").splice(0, 315).join("") }}
+              </p>
+            </div>
+
+            <div
+              class="buttons d-flex justify-content-center align-items-center gap-3"
+            >
+              <a
+                class="btn main__btn text-white"
+                href="{{ project.githup }}"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+                <span>githup</span>
+              </a>
+              <a
+                class="btn main__btn text-white"
+                href="{{ project.demo }}"
+                target="_blank"
+              >
+                <i class="fa-solid fa-eye"></i> <span>demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

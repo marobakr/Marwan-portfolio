@@ -1,0 +1,13 @@
+@import "variables";
+
+.loding {
+  /* Positioning */
+  position: absolute;
+
+  /* Color */
+  background-color: $primary-color;
+
+  /* Other */
+  inset: 0;
+  z-index: 99999;
+}
