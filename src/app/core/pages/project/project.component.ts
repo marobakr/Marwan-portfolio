@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { MaintitleComponent } from 'src/app/shared/maintitle/maintitle.component';
 import { Projects } from '../../interfaces/projects';
 import { ProjectsService } from '../../services/projects.service';
+import { GlobalCanvasComponent } from 'src/app/shared/global-canvas/global-canvas.component';
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [CommonModule, MaintitleComponent],
+  imports: [CommonModule, MaintitleComponent, GlobalCanvasComponent],
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
   providers: [ProjectsService],
