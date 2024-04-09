@@ -50,6 +50,9 @@
     width: 50px;
   }
 
+  .navbar-toggler {
+    background-color: $alternate-color;
+  }
   &__links {
     li {
       /* Positioning */
