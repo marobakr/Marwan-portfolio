@@ -12,6 +12,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 })
 export class NavbarComponent {
   Scrolling: boolean = false;
+  isShow: boolean = false;
   repoPath: string = 'https://github.com/marobakr/my-Portfolio';
   @HostListener('window:scroll', []) onScroll() {
     if (window.scrollY > 10) {

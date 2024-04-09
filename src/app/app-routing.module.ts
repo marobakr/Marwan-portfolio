@@ -22,13 +22,7 @@ const routes: Routes = [
         (m) => m.ProjectComponent
       ),
   },
-  {
-    path: 'elzero',
-    loadComponent: () =>
-      import('./core/pages/elzero/elzero.component').then(
-        (m) => m.ElzeroComponent
-      ),
-  },
+
   {
     path: 'resume',
     loadComponent: () =>
