@@ -2,11 +2,17 @@ import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ClassActiveDirective } from 'src/app/shared/class-active.directive';
+import { CanvasComponent } from '../home/components/canvas/canvas.component';
 
 @Component({
   selector: 'app-resume',
   standalone: true,
-  imports: [CommonModule, PdfViewerModule, ClassActiveDirective],
+  imports: [
+    CommonModule,
+    PdfViewerModule,
+    ClassActiveDirective,
+    CanvasComponent,
+  ],
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss'],
 })
