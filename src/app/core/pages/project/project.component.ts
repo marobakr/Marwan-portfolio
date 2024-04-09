@@ -4,11 +4,12 @@ import { MaintitleComponent } from 'src/app/shared/maintitle/maintitle.component
 import { Projects } from '../../interfaces/projects';
 import { ProjectsService } from '../../services/projects.service';
 import { GlobalCanvasComponent } from 'src/app/shared/global-canvas/global-canvas.component';
+import { CanvasComponent } from '../home/components/canvas/canvas.component';
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [CommonModule, MaintitleComponent, GlobalCanvasComponent],
+  imports: [CommonModule, MaintitleComponent, CanvasComponent],
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
   providers: [ProjectsService],
