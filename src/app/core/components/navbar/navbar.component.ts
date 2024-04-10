@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClassActiveDirective } from 'src/app/shared/class-active.directive';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { ProjectsService } from '../../services/projects.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,11 +10,14 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
   imports: [CommonModule, ClassActiveDirective, AppRoutingModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
+  providers: [ProjectsService],
 })
 export class NavbarComponent {
+  constructor(private _projectsService: ProjectsService) {}
   Scrolling: boolean = false;
+  inResume: number = 0;
   isShow: boolean = false;
-  repoPath: string = 'https://github.com/marobakr/my-Portfolio';
+  repoPath: string = 'https://github.com/marobakr/Marwan-portfolio';
   @HostListener('window:scroll', []) onScroll() {
     if (window.scrollY > 10) {
       this.Scrolling = true;

@@ -1,8 +1,9 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ClassActiveDirective } from 'src/app/shared/class-active.directive';
 import { CanvasComponent } from '../home/components/canvas/canvas.component';
+import { ProjectsService } from '../../services/projects.service';
 
 @Component({
   selector: 'app-resume',
@@ -14,6 +15,7 @@ import { CanvasComponent } from '../home/components/canvas/canvas.component';
     CanvasComponent,
   ],
   templateUrl: './resume.component.html',
+  providers: [ProjectsService],
   styleUrls: ['./resume.component.scss'],
 })
 export class ResumeComponent {

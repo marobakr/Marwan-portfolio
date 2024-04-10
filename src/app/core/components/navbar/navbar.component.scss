@@ -22,10 +22,9 @@
       top: 5px;
       bottom: 5px;
     }
-    box-shadow: 0 10px 10px 0 #0f0b18ad;
-
-    /* Color */
-    background-color: $section-background-color;
+    /* Other */
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 10px 0 rgba(9, 5, 29, 0.171);
 
     img {
       /* Box Model */
