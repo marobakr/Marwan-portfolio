@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ToolComponent } from './components/tool/tool.component';
 import { MaintitleComponent } from 'src/app/shared/maintitle/maintitle.component';
-import { DaysCodeComponent } from './components/days-code/days-code.component';
 import { CanvasComponent } from 'src/app/core/pages/home/components/canvas/canvas.component';
 
 @Component({
@@ -14,7 +13,6 @@ import { CanvasComponent } from 'src/app/core/pages/home/components/canvas/canva
     SkillsComponent,
     ToolComponent,
     MaintitleComponent,
-    DaysCodeComponent,
     CanvasComponent,
   ],
   templateUrl: './about.component.html',
