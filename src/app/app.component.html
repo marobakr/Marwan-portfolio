@@ -1,4 +1,4 @@
-<div class="app position-relative" *ngIf="!isLoding">
+<div class="app" *ngIf="!isLoding">
   <app-navbar></app-navbar>
   <router-outlet></router-outlet>
   <app-footer></app-footer>
@@ -10,5 +10,4 @@
     👆
   </button>
 </div>
-
 <app-loding [isLoding]="isLoding"></app-loding>

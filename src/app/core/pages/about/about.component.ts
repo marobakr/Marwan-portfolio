@@ -1,9 +1,9 @@
+import { CanvaseComponent } from './../../../shared/canvase/canvase.component';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ToolComponent } from './components/tool/tool.component';
 import { MaintitleComponent } from 'src/app/shared/maintitle/maintitle.component';
-// import { CanvasComponent } from 'src/app/core/pages/home/components/canvas/canvas.component';
 
 @Component({
   selector: 'app-about',
@@ -13,7 +13,7 @@ import { MaintitleComponent } from 'src/app/shared/maintitle/maintitle.component
     SkillsComponent,
     ToolComponent,
     MaintitleComponent,
-    // CanvasComponent,
+    CanvaseComponent,
   ],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
