@@ -33,9 +33,7 @@ const routes: Routes = [
   {
     path: '**',
     loadComponent: () =>
-      import('./core/pages/notfound/notfound.component').then(
-        (m) => m.NotfoundComponent
-      ),
+      import('./core/pages/home/home.component').then((m) => m.HomeComponent),
   },
 ];
 
