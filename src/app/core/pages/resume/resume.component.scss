@@ -5,21 +5,20 @@
 .resume {
   pdf-viewer {
     width: 100%;
-    min-height: 140vh;
     @media (max-width: 576px) {
-      min-height: 60vh;
+      min-height: 65vh;
     }
     @media (min-width: 577px) {
       min-height: 70vh;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 767px) {
       min-height: 85vh;
     }
     @media (min-width: 922px) {
       min-height: 110vh;
     }
     @media (min-width: 1200px) {
-      min-height: 140vh;
+      min-height: 160vh;
     }
   }
   &__bulets span {

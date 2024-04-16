@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CanvasComponent } from './pages/home/components/canvas/canvas.component';
 import { LodingComponent } from '../shared/loding/loding.component';
+// import { GlobalCanvasComponent } from '../shared/global-canvas/global-canvas.component';
 
 @NgModule({
   declarations: [],
@@ -12,14 +12,14 @@ import { LodingComponent } from '../shared/loding/loding.component';
     NavbarComponent,
     HomeComponent,
     FooterComponent,
-    CanvasComponent,
+    // GlobalCanvasComponent,
     LodingComponent,
   ],
   exports: [
     NavbarComponent,
     HomeComponent,
     FooterComponent,
-    CanvasComponent,
+    // GlobalCanvasComponent,
     LodingComponent,
   ],
 })

@@ -1,4 +1,4 @@
-<section class="resume position-relative">
+<section class="resume">
   <div class="container text-center">
     <a
       download="Marwan Abubakr FrontEnd Angular.pdf"
@@ -7,39 +7,41 @@
     >
       <i class="fa-solid fa-download px-1"></i> <span>download CV</span>
     </a>
-    <pdf-viewer
-      [src]="pdfSrc"
-      [render-text]="true"
-      [(page)]="currentPage"
-      [external-link-target]="'blank'"
-      [render-text]="true"
-      [rotation]="90"
-      [original-size]="false"
-      [fit-to-page]="true"
-      [show-all]="false"
-      [autoresize]="true"
-      (after-load-complete)="afterLoadComplete($event)"
-      (page-rendered)="pageRendered($event)"
-    ></pdf-viewer>
-    <div #bullets class="resume__bulets">
-      <span
-        [ngClass]="{ activeItem: page1 }"
-        (click)="pdfPagination(1, 'page1')"
-        class="mb-5 activeItem"
-      ></span>
-      <span
-        [ngClass]="{ activeItem: page2 }"
-        (click)="pdfPagination(2, 'page2')"
-        class="resume__bulets mb-5"
-      ></span>
+    <div class="resume__pdf">
+      <pdf-viewer
+        [src]="pdfSrc"
+        [render-text]="true"
+        [(page)]="currentPage"
+        [external-link-target]="'blank'"
+        [render-text]="true"
+        [rotation]="90"
+        [original-size]="false"
+        [fit-to-page]="true"
+        [show-all]="false"
+        [autoresize]="true"
+        (after-load-complete)="afterLoadComplete($event)"
+        (page-rendered)="pageRendered($event)"
+      ></pdf-viewer>
+
+      <div #bullets class="resume__bulets">
+        <span
+          [ngClass]="{ activeItem: page1 }"
+          (click)="pdfPagination(1, 'page1')"
+          class="mb-5 activeItem"
+        ></span>
+        <span
+          [ngClass]="{ activeItem: page2 }"
+          (click)="pdfPagination(2, 'page2')"
+          class="resume__bulets mb-5"
+        ></span>
+      </div>
+      <a
+        class="btn main__btn text-capitalize text-white mb-5"
+        [href]="pdfSrc"
+        target="_blank"
+      >
+        <i class="fa-solid fa-print px-1"></i> <span>print CV</span>
+      </a>
     </div>
-    <a
-      class="btn main__btn text-capitalize text-white"
-      [href]="pdfSrc"
-      target="_blank"
-    >
-      <i class="fa-solid fa-print px-1"></i> <span>print CV</span>
-    </a>
   </div>
-  <app-canvas></app-canvas>
 </section>
