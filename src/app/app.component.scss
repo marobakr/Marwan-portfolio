@@ -1,0 +1,19 @@
+@import "variables";
+
+.scroll__top {
+  /* Box Model */
+  width: fit-content;
+
+  /* Positions */
+  bottom: 15px;
+  right: 15px;
+
+  /* Text */
+  font: {
+    size: $main-font;
+    weight: $main-weight;
+  }
+
+  /* Other */
+  z-index: 9999;
+}

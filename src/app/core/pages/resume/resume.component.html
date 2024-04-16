@@ -9,6 +9,7 @@
     </a>
     <div class="resume__pdf">
       <pdf-viewer
+        class="mb-4"
         [src]="pdfSrc"
         [render-text]="true"
         [(page)]="currentPage"
@@ -19,8 +20,6 @@
         [fit-to-page]="true"
         [show-all]="false"
         [autoresize]="true"
-        (after-load-complete)="afterLoadComplete($event)"
-        (page-rendered)="pageRendered($event)"
       ></pdf-viewer>
 
       <div #bullets class="resume__bulets">

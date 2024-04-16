@@ -2,5 +2,13 @@
   <app-navbar></app-navbar>
   <router-outlet></router-outlet>
   <app-footer></app-footer>
+  <button
+    (click)="scrollToTop()"
+    *ngIf="isScroll"
+    class="btn main__btn position-fixed scroll__top text-white"
+  >
+    👆
+  </button>
 </div>
+
 <app-loding [isLoding]="isLoding"></app-loding>

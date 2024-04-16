@@ -4,19 +4,23 @@
 
 .resume {
   pdf-viewer {
-    width: 100%;
-    @media (max-width: 576px) {
+    @media (max-width: 400px) {
+      min-height: 55vh;
+    }
+    @media (min-width: 401px) and (max-width: 576px) {
       min-height: 65vh;
     }
-    @media (min-width: 577px) {
+    @media (min-width: 577px) and (max-width: 767px) {
       min-height: 70vh;
     }
-    @media (min-width: 767px) {
-      min-height: 85vh;
+    @media (min-width: 768px) and (max-width: 992px) {
+      min-height: 80vh;
     }
-    @media (min-width: 922px) {
-      min-height: 110vh;
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+      min-height: 105vh;
     }
+
     @media (min-width: 1200px) {
       min-height: 160vh;
     }

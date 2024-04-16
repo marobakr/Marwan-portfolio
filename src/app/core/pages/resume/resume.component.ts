@@ -31,16 +31,6 @@ export class ResumeComponent {
     this._viewportScroller.scrollToPosition([0, 0]);
   }
 
-  afterLoadComplete(event: any) {
-    // Handle after-load-complete event
-    console.log('PDF loaded completely', event);
-  }
-
-  pageRendered(event: any) {
-    // Handle page-rendered event
-    console.log('Page rendered', event);
-  }
-
   toggleBullets(word: string): void {
     this.page1 = word === 'page1';
     this.page2 = word === 'page2';

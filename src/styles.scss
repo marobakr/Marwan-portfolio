@@ -47,3 +47,25 @@ body {
   /* Other */
   z-index: 2;
 }
+
+/* Stlye For Browser */
+::selection {
+  /* Color */
+  background-color: $alternate-color;
+  color: #ffffff;
+}
+::-webkit-scrollbar {
+  /* Box Modle */
+  width: 7px;
+
+  /* Color */
+  background-color: $primary-color;
+}
+
+::-webkit-scrollbar-thumb {
+  /* Box Model */
+  border-radius: 30px;
+
+  /* Color */
+  background-color: $popular-color;
+}
