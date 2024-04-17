@@ -1,5 +1,5 @@
 import { CanvaseComponent } from './../../../shared/canvase/canvase.component';
-import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ClassActiveDirective } from 'src/app/shared/class-active.directive';
