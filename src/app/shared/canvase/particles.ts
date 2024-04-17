@@ -1,4 +1,4 @@
-export const ParticlesConfig = {
+/* export const ParticlesConfig = {
   particles: {
     number: {
       value: 100,
@@ -89,9 +89,8 @@ export const ParticlesConfig = {
     },
   },
   retina_detect: true,
-};
+}; */
 
-/*
 export const ParticlesConfig = {
   particles: {
     number: {
@@ -134,8 +133,6 @@ export const ParticlesConfig = {
   },
   retina_detect: true,
 };
-
-*/
 
 // export const ParticlesConfig = {
 //   particles: {
