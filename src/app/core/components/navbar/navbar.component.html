@@ -29,16 +29,15 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div
-      [ngClass]="{ show: isShow }"
+      #navbarCollapse
       class="collapse navbar-collapse"
       id="navbarSupportedContent"
     >
       <ul class="navbar__links navbar-nav ms-auto mb-2 gap-2 mb-lg-0">
         <!-- Home -->
 
-        <!-- there was a pug heree ⭕⭕⭕⭕⭕ -->
         <li
-          (click)="isShow = false"
+          (click)="closeNavbar()"
           routerLink="/home"
           routerLinkActive="link-active"
           class="nav-item"
@@ -66,7 +65,12 @@
         </li>
 
         <!-- About  -->
-        <li routerLink="about" routerLinkActive="link-active" class="nav-item">
+        <li
+          (click)="closeNavbar()"
+          routerLink="about"
+          routerLinkActive="link-active"
+          class="nav-item"
+        >
           <a
             class="nav-link active text-white text-capitalize px-3"
             aria-current="page"
@@ -91,6 +95,7 @@
 
         <!-- Projects -->
         <li
+          (click)="closeNavbar()"
           routerLink="projects"
           routerLinkActive="link-active"
           class="nav-item"
@@ -124,7 +129,12 @@
         </li>
 
         <!-- Resume -->
-        <li routerLink="resume" routerLinkActive="link-active" class="nav-item">
+        <li
+          (click)="closeNavbar()"
+          routerLink="resume"
+          routerLinkActive="link-active"
+          class="nav-item"
+        >
           <a
             class="nav-link active text-white text-capitalize px-3"
             aria-current="page"
@@ -153,7 +163,7 @@
           </a>
         </li>
         <!-- Icon -->
-        <li class="nav-item align-items-center icons">
+        <li (click)="closeNavbar()" class="nav-item align-items-center icons">
           <a
             [href]="repoPath"
             target="_blank"

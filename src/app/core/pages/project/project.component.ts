@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { MaintitleComponent } from 'src/app/shared/maintitle/maintitle.component';
 import { Projects } from '../../interfaces/projects';
 import { ProjectsService } from '../../services/projects.service';
-// import { GlobalCanvasComponent } from 'src/app/shared/global-canvas/global-canvas.component';
-// import { CanvasComponent } from '../home/components/canvas/canvas.component';
 
 @Component({
   selector: 'app-project',
