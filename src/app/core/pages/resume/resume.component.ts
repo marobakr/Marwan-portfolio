@@ -23,7 +23,7 @@ export class ResumeComponent {
   page1: boolean = true;
   page2: boolean = false;
   currentPage: number = 1;
-  pdfSrc: string = '../../../../assets/Marwan Abubakr FrontEnd Angular.pdf';
+  pdfSrc: string = './assets/Marwan Abubakr FrontEnd Angular.pdf';
 
   pdfPagination(event: number, item: string): void {
     this.currentPage = event;

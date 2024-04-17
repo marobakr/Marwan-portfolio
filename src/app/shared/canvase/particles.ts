@@ -194,7 +194,7 @@ export const ParticlesConfig = {
       direction: 'none',
       random: true,
       /* This is Last Changes */
-      straight: true,
+      straight: false,
       out_mode: 'out',
       bounce: false,
       attract: {
