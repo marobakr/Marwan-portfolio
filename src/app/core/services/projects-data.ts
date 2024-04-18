@@ -3,9 +3,9 @@ import { Projects } from '../interfaces/projects';
 export const ProjectsData: Projects[] = [
   {
     id: 1,
-    name: 'Kasper',
+    name: 'Bondi',
     discription:
-      'Kasper is a sleek and modern website designed to showcase various aspects of a project or personal portfolio. It utilizes a clean layout with minimalist design elements to highlight content effectively. The website is responsive and compatible with different devices, providing a seamless user experience.',
+      'Bondi is a sleek and modern website designed to showcase various aspects of a project or personal portfolio. It utilizes a clean layout with minimalist design elements to highlight content effectively. The website is responsive and compatible with different devices, providing a seamless user experience.',
     image: './assets/Projects/bondi.png',
     demo: 'https://curious-gaufre-7cf14d.netlify.app',
     githup: 'https://github.com/marobakr/bondi',
@@ -266,7 +266,7 @@ export const ProjectsData: Projects[] = [
     discription:
       "Our GitHub User Information Website provides users with a convenient way to explore GitHub users' profiles, including their repositories, names, followers, and locations. With a clean and intuitive interface, users can easily search for GitHub users and access detailed information about them. Built with HTML, CSS, JavaScript, and the GitHub API, our website offers a seamless experience for discovering and learning more about GitHub users and their contributions.",
     image: './assets/Projects/super-fetch-githup.png',
-    demo: 'githup-cloned.vercel.app',
+    demo: 'https://githup-cloned.vercel.app/',
     githup: 'https://github.com/marobakr/Githup-Cloned',
     rule: 'pure',
     languages: ['html5', 'css3', 'javascript', 'API', 'Scss'],
