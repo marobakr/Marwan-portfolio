@@ -21,6 +21,7 @@
     "@fortawesome/fontawesome-free": "^6.5.2",
     "bootstrap": "^5.3.3",
     "ng2-pdf-viewer": "^10.0.0",
+    "ngx-typed-js": "^2.1.1",
     "particles.js": "^2.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

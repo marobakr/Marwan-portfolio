@@ -16,21 +16,21 @@
               marwan abubakr</strong
             >
           </h2>
-
-          <!-- <span
-              class="landing__type text-capitalize heading-color"
-              typingAnimator
-              [showCursor]="true"
-              [typeSpeed]="120"
-              [startDelay]="100"
-              [sentences]="[
-                'Software Engineer',
-                'front End Angular +2',
-                'Freelancer',
-                'Open Source Contributor'
-              ]"
-            >
-            </span> -->
+          <ngx-typed-js
+            class="landing__type text-capitalize heading-color"
+            [strings]="[
+              'Software Engineer',
+              'front End Angular +2',
+              'Freelancer',
+              'Open Source Contributor'
+            ]"
+            [loop]="true"
+            [showCursor]="true"
+            [typeSpeed]="60"
+            [backDelay]="1000"
+          >
+            <h2><span class="typing h1"></span></h2>
+          </ngx-typed-js>
         </div>
       </div>
       <div class="col-md-6">
