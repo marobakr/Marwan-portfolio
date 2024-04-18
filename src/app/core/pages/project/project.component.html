@@ -83,29 +83,26 @@
             <h5 class="text-center popular__main__color text-capitalize">
               {{ project.name }}
             </h5>
-
             <!-- Technologies Uses -->
             <div class="projects__languages mb-4">
               <h5>Technologies</h5>
               <div class="Technologies">
-                <span
+                <p
                   class="fw-light mb-0 d-inline-block px-1"
                   *ngFor="let language of project.languages"
                 >
                   {{ language }}
-                </span>
+                </p>
               </div>
             </div>
-
             <!-- discription  -->
             <div class="discription mb-4">
               <h5 class="text-center text-capitalize">discription</h5>
               <p class="projects__discription mb-3">
-                {{ project.discription.split("").splice(0, 300).join("") }}
+                {{ project.discription.split("").splice(0, 315).join("") }}
               </p>
             </div>
 
-            <!-- Buttons  -->
             <div
               class="buttons d-flex justify-content-center align-items-center gap-3"
             >

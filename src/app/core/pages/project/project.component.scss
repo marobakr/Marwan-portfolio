@@ -4,10 +4,8 @@
 
 .projects {
   &__card {
-    /* Layout */
-    height: 100%;
-
     /* Box Model */
+    min-height: 650px;
     box-shadow: 0 4px 9px 4px rgba(119, 53, 136, 0.459);
 
     /* Other */

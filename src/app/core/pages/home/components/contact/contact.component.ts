@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaintitleComponent } from 'src/app/shared/maintitle/maintitle.component';
-import { CanvaseComponent } from 'src/app/shared/canvase/canvase.component';
+// import { CanvasComponent } from 'src/app/core/pages/home/components/canvas/canvas.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, MaintitleComponent, CanvaseComponent],
+  imports: [CommonModule, MaintitleComponent],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
