@@ -240,25 +240,7 @@ export const ProjectsData: Projects[] = [
     rule: 'crude',
     languages: ['html5', 'css3', 'javascript', 'localStorge'],
   },
-  {
-    id: 20,
 
-    name: 'comfy Sloth',
-    discription:
-      'Our Home Furniture Ecommerce Website offers a seamless and enjoyable shopping experience for users looking to purchase furniture for their homes. With a focus on simplicity, elegance, and functionality, our website showcases a wide range of home furniture products, including sofas, chairs, tables, beds, and more. Built with HTML, CSS, JavaScript, Bootstrap, Next.js, and Material UI, our website provides a modern and responsive platform for users to explore, select, and purchase furniture items for their living spaces.',
-    image: './assets/Projects/comfySloth.png',
-    demo: 'https://quiet-duckanoo-3ad886.netlify.app',
-    githup: 'https://github.com/marobakr/comfy-Sloth',
-    rule: 'frameworks',
-    languages: [
-      'html5',
-      'Scss',
-      'javascript',
-      'Next JS',
-      'Bootstrap',
-      'Material UI',
-    ],
-  },
   {
     id: 21,
 
