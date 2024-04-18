@@ -1,4 +1,10 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClassActiveDirective } from 'src/app/shared/class-active.directive';
 import { AppRoutingModule } from 'src/app/app-routing.module';
@@ -13,7 +19,9 @@ import { ProjectsService } from '../../services/projects.service';
   providers: [ProjectsService],
 })
 export class NavbarComponent {
-  constructor(private _projectsService: ProjectsService) {}
+  constructor() {}
+
+  @ViewChild('navbarCollapse') btnMopileNav!: ElementRef;
   Scrolling: boolean = false;
   inResume: number = 0;
   isShow: boolean = false;
@@ -24,5 +32,9 @@ export class NavbarComponent {
     } else {
       this.Scrolling = false;
     }
+  }
+
+  closeNavbar(): void {
+    this.btnMopileNav.nativeElement.classList.remove('show');
   }
 }

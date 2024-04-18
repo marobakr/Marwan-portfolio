@@ -1,6 +1,12 @@
 @import "variables";
 
 .tool__skills {
+  /* Positions */
+  position: relative;
+
+  /* Other */
+  z-index: 3;
+
   .icon {
     /* Box Model */
     padding: 30px;
