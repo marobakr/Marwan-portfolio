@@ -9,7 +9,7 @@
 
 <center>
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
+
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
 
@@ -47,7 +47,7 @@ Clone down this repository. You will need `node.js` and `git` installed globally
 2. In the project directory, you can run: `ng s -o `
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:4200) to view it in the browser.
+Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
 The page will reload if you make edits.
 
 ## Usage Instructions
