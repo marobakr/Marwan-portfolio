@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio Website - v1.0<br/>
-  <a href="my-portfolio-xi-henna-80.vercel.app/" target="_blank">Marwan Abubakr Portfolio</a>
+  <a href="https://marwan-portfolio-nu.vercel.app/home" target="_blank">Marwan Abubakr Portfolio</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="./src/assets/readme-img.png" />
@@ -19,7 +19,7 @@
 
 ## Built With
 
-My personal portfolio <a href="marwan-portfolio-nu.vercel.app" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+My personal portfolio <a href="https://marwan-portfolio-nu.vercel.app/home" target="_blank">Marwan Abubakr</a> which features some of my github projects as well as my resume and technical skills.<br/>
 
 This project was built using these technologies.
 
