@@ -19,7 +19,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/marwan-abubakr",
+            "outputPath": "dist/Marwan-Abubakr/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -99,6 +99,69 @@
             "styles": ["src/styles.scss"],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/Marwan-Abubakr/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/core/style/base/",
+                "src/app/core/style/components",
+                "src/app/core/style/themes/",
+                "src/app/core/style/utilities/"
+              ]
+            },
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "Marwan-Abubakr:build:development",
+              "serverTarget": "Marwan-Abubakr:server:development"
+            },
+            "production": {
+              "browserTarget": "Marwan-Abubakr:build:production",
+              "serverTarget": "Marwan-Abubakr:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "Marwan-Abubakr:build:production",
+              "serverTarget": "Marwan-Abubakr:server:production"
+            },
+            "development": {
+              "browserTarget": "Marwan-Abubakr:build:development",
+              "serverTarget": "Marwan-Abubakr:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
