@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/home/sitemap.xml",
-      "destination": "./src/assets/sitemap.xml"
-    }
-  ]
-}
