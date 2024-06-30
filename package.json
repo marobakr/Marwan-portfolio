@@ -10,7 +10,8 @@
     "dev:ssr": "ng run Marwan-Abubakr:serve-ssr",
     "serve:ssr": "node dist/Marwan-Abubakr/server/main.js",
     "build:ssr": "ng build && ng run Marwan-Abubakr:server",
-    "prerender": "ng run Marwan-Abubakr:prerender"
+    "prerender": "ng run Marwan-Abubakr:prerender",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
