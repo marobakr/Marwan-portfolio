@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "marwan-abubakr",
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/Marwan-Abubakr//browser/**"
+    }
+  }
+}
