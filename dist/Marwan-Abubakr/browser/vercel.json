@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "angular.json", "use": "@vercel/static-build" },
+    { "src": "server/main.js", "use": "@vercel/node" }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "/server/main.js" }]
+}
