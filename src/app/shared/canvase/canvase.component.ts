@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
 import { ParticlesConfig } from './particles';
 
 declare let particlesJS: any;
@@ -12,8 +14,12 @@ declare let particlesJS: any;
   styleUrls: ['./canvase.component.scss'],
 })
 export class CanvaseComponent implements OnInit {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit(): void {
-    this.invokeParticles();
+    if (isPlatformBrowser(this.platformId)) {
+      this.invokeParticles();
+    }
   }
 
   invokeParticles(): void {

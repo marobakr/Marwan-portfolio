@@ -1,6 +1,6 @@
 import { CanvaseComponent } from './../../../../../shared/canvase/canvase.component';
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 
 @Component({
@@ -10,6 +10,10 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss'],
 })
-export class LandingComponent implements OnInit {
-  ngOnInit(): void {}
+export class LandingComponent {
+  isBrowser: boolean;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 }

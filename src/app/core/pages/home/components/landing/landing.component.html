@@ -17,10 +17,11 @@
             >
           </h2>
           <ngx-typed-js
+            *ngIf="isBrowser"
             class="landing__type text-capitalize heading-color"
             [strings]="[
               'Software Engineer',
-              'front End Angular +2',
+              'Front End Angular +2',
               'Freelancer',
               'Open Source Contributor'
             ]"
