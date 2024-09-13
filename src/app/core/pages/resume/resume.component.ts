@@ -1,9 +1,10 @@
-import { CanvaseComponent } from './../../../shared/canvase/canvase.component';
-import { Component } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
+import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ClassActiveDirective } from 'src/app/shared/class-active.directive';
 import { ProjectsService } from '../../services/projects.service';
+import { CanvaseComponent } from './../../../shared/canvase/canvase.component';
 
 @Component({
   selector: 'app-resume',
@@ -13,6 +14,7 @@ import { ProjectsService } from '../../services/projects.service';
     PdfViewerModule,
     ClassActiveDirective,
     CanvaseComponent,
+    TranslateModule,
   ],
   templateUrl: './resume.component.html',
   providers: [ProjectsService],

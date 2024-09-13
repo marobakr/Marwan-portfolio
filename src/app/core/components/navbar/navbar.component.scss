@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixin";
+@import 'variables';
+@import 'mixin';
 
 .navbar {
   /* Box Model */
@@ -77,7 +77,7 @@
         height: 0px;
 
         /* Other */
-        content: "";
+        content: '';
         background-color: $alternate-color;
         transition: $main-animation;
         z-index: -1;
@@ -111,4 +111,22 @@
     /* Color */
     background-color: $alternate-color;
   }
+
+  .lang-active {
+    a {
+      /* Box Model */
+      border: 2px solid $border-color;
+
+      /* Color */
+      color: #fff;
+      background-color: $alternate-color;
+    }
+  }
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  /* Color */
+  color: #fff;
+  background-color: $alternate-color;
 }

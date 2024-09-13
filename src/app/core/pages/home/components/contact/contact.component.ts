@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { MaintitleComponent } from 'src/app/shared/maintitle/maintitle.component';
-// import { CanvasComponent } from 'src/app/core/pages/home/components/canvas/canvas.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, MaintitleComponent],
+  imports: [CommonModule, MaintitleComponent, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
@@ -22,3 +22,16 @@ export class ContactComponent implements OnInit {
     }
   }
 }
+
+/* 
+
+     "wantToLearn": "وأرغب في تعلم",
+      "otherTechnologies": "تقنيات أخرى",
+      "like": "مثل",
+      "exampleLike": "مثل",
+      "likeToWork": "وأحب العمل على",
+      "teamProjects": "المشاريع الجماعية",
+      "meetNew": "والتعرف على أشخاص جدد",
+      "learnNew": "وتعلم أشياء جديدة",
+      "challenges": "وتحديات جديدة"
+*/

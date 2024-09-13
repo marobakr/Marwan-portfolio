@@ -33,9 +33,38 @@
                 "src/app/core/style/utilities/"
               ]
             },
-            "assets": ["src/favicon.png", "src/assets"],
+            "assets": [
+              "src/favicon.png",
+              "src/assets",
+              {
+                "glob": "Aboutsitemap.xml",
+                "input": "src/assets/sitesMap",
+                "output": "/about"
+              },
+              {
+                "glob": "Resumesitemap.xml",
+                "input": "src/assets/sitesMap",
+                "output": "/resume"
+              },
+              {
+                "glob": "Projectssitemap.xml",
+                "input": "src/assets/sitesMap",
+                "output": "/projects"
+              },
+              {
+                "glob": "Rootsitemap.xml",
+                "input": "src/assets/sitesMap",
+                "output": "/"
+              },
+              {
+                "glob": "Homesitemap.xml",
+                "input": "src/assets/sitesMap",
+                "output": "/home"
+              }
+            ],
             "styles": [
               "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": [

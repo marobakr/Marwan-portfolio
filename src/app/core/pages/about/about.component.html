@@ -3,48 +3,94 @@
     <div class="row pb-5">
       <div class="col-md-7">
         <div class="mb-5">
-          <app-maintitle [popular]="'I\'M'">
-            <span class="before text-capitalize"> Know Who </span>
+          <app-maintitle [popular]="'about.intro.me' | translate">
+            <span class="before text-capitalize">
+              {{ 'about.intro.knowWho' | translate }}
+            </span>
           </app-maintitle>
         </div>
 
         <blockquote class="text-white">
           <p class="mb-4 main-fonts">
-            Hi Everyone, I am
-            <span class="popular__main__color">Marwan Abubakr</span> from
-            <span class="popular__main__color">Alexandria, Egypt.<br /></span>
-            I have completed an internship at Route Academy as Front End
-            Developer (Angular)
+            {{ 'about.introduction.full' | translate }}
+            <span class="popular__main__color">
+              {{ 'about.introduction.name' | translate }}
+            </span>
+            {{ 'about.introduction.form' | translate }}
+            <span class="popular__main__color">
+              {{ 'about.introduction.location' | translate }}
+              <br />
+            </span>
+            {{ 'about.introduction.internship1' | translate }}
+            <span class="popular__main__color"> Route Academy</span>
+            {{ 'about.introduction.front' | translate }}
+            <span class="popular__main__color"> ( Angular 16,17 ) </span>
             <br />
-            Now I'm completing an internship at Root Academy as Back End
-            Developer (ASP.NET)
+            {{ 'about.introduction.internship2' | translate }}
+            <span class="popular__main__color"> Route Academy</span>
+            {{ 'about.introduction.back' | translate }}
+            <span class="popular__main__color"> ( ASP.NET Core ) </span>
+            <br />
+            <span>
+              {{ 'about.introduction.internship3' | translate }}
+            </span>
+            <span class="popular__main__color"> VC </span>
+            {{ 'about.introduction.become' | translate }}
+            <span class="popular__main__color"> Githup </span>
+            {{ 'about.introduction.enhance' | translate }}
+            <span class="popular__main__color">
+              Solid Principles, Design Patterns
+            </span>
           </p>
           <p class="mb-4 main-fonts">
-            Apart from coding, some other activities that I love to do!
+            {{ 'about.introduction.aprtCode' | translate }}
           </p>
         </blockquote>
+
         <div class="about__activities text-white main-fonts">
           <div class="d-flex align-items-center gap-2">
-            <i class="fa-solid fa-hand-point-right"></i>
-            <span> Playing chess </span>
+            <i
+              [class.fa-hand-point-right]="translate.currentLang == 'en'"
+              [class.fa-hand-point-left]="translate.currentLang == 'ar'"
+              class="fa-solid"
+            ></i>
+            <span>
+              {{ 'about.hobbies.chess' | translate }}
+            </span>
           </div>
           <div class="d-flex align-items-center gap-2">
-            <i class="fa-solid fa-hand-point-right"></i>
-            <span> Reading books and novels </span>
+            <i
+              [class.fa-hand-point-right]="translate.currentLang == 'en'"
+              [class.fa-hand-point-left]="translate.currentLang == 'ar'"
+              class="fa-solid"
+            ></i>
+            <span>
+              {{ 'about.hobbies.reading' | translate }}
+            </span>
           </div>
           <div class="d-flex align-items-center gap-2">
-            <i class="fa-solid fa-hand-point-right"></i>
-            <span> Travelling </span>
+            <i
+              [class.fa-hand-point-right]="translate.currentLang == 'en'"
+              [class.fa-hand-point-left]="translate.currentLang == 'ar'"
+              class="fa-solid"
+            ></i>
+            <span> {{ 'about.hobbies.traveling' | translate }} </span>
           </div>
         </div>
         <p class="text-center about__footer main-fonts">
-          "Strive to build things that make a difference!"
+          {{ 'about.intro.motto' | translate }}
         </p>
-        <p class="about__footer text-center main-fonts">Marwan</p>
+        <p class="about__footer text-center main-fonts">
+          {{ 'about.intro.signature' | translate }}
+        </p>
       </div>
       <div class="col-md-5">
         <figure>
-          <img src="./assets/about.png" class="w-100" alt="about-image" />
+          <img
+            src="./assets/main-images/about.png"
+            class="w-100"
+            alt="about-image"
+          />
         </figure>
       </div>
     </div>

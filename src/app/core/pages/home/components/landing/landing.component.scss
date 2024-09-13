@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 .landing {
   /* Box Model */
@@ -6,7 +6,7 @@
 
   /* Color */
   background : {
-    image: url("../../../../../../assets/home-bg.jpg");
+    image: url('../../../../../../assets/main-images/home-bg.jpg');
     position: top;
     size: cover;
   }
