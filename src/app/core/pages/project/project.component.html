@@ -1,11 +1,16 @@
 <section class="projects">
   <div class="container">
     <div class="mb-5">
-      <app-maintitle [popular]="'works'" class="mb-0">
-        <span class="before text-capitalize">my recent </span>
+      <app-maintitle
+        [popular]="'projects.labels.primary' | translate"
+        class="mb-0"
+      >
+        <span class="before text-capitalize">
+          {{ 'projects.labels.alter' | translate }}
+        </span>
       </app-maintitle>
       <p class="text-center text-white">
-        Here are a few projects I've worked on recently.
+        {{ 'projects.commonuse.recenlty-project' | translate }}
       </p>
     </div>
 
@@ -17,14 +22,14 @@
           [ngClass]="{ projects__active: all }"
           class="btn fw-semibold main__btn text-white text-capitalize"
         >
-          all
+          {{ 'projects.labels.all' | translate }}
         </button>
         <button
           (click)="fillter('landing')"
           [ngClass]="{ projects__active: landing }"
           class="btn fw-semibold main__btn text-white text-capitalize"
         >
-          landing padge
+          {{ 'projects.labels.landing' | translate }}
         </button>
         <button
           (click)="fillter('pure')"
@@ -45,7 +50,7 @@
           [ngClass]="{ projects__active: frameworks }"
           class="btn fw-semibold main__btn text-white text-capitalize"
         >
-          frameworks
+          {{ 'projects.labels.frameworks' | translate }}
         </button>
         <button
           (click)="fillter('crude')"
@@ -57,12 +62,14 @@
       </div>
       <h4 class="text-white">
         <span class="popular__main__color">{{ lengthProjects }} </span>
-        Projects
-        <span class="popular__main__color"> found </span>
+        {{ 'projects.commonuse.project_pro' | translate }}
+        <span class="popular__main__color">
+          {{ 'projects.commonuse.found' | translate }}
+        </span>
       </h4>
       <div
         class="col-md-6 col-xl-4"
-        *ngFor="let project of allProjects"
+        *ngFor="let project of allProjects; let i = index"
         role="button"
       >
         <!-- Cart Project -->
@@ -85,7 +92,7 @@
             </h5>
             <!-- Technologies Uses -->
             <div class="projects__languages mb-4">
-              <h5>Technologies</h5>
+              <h5>{{ 'projects.commonuse.title' | translate }}</h5>
               <div class="Technologies">
                 <p
                   class="fw-light mb-0 d-inline-block px-1"
@@ -97,9 +104,11 @@
             </div>
             <!-- discription  -->
             <div class="discription mb-4">
-              <h5 class="text-center text-capitalize">discription</h5>
+              <h5 class="text-center text-capitalize">
+                {{ 'projects.commonuse.discription' | translate }}
+              </h5>
               <p class="projects__discription mb-3">
-                {{ project.discription.split("").splice(0, 315).join("") }}
+                {{ getTranslationKey(i) | translate }}
               </p>
             </div>
 
@@ -112,14 +121,19 @@
                 target="_blank"
               >
                 <i class="fa-brands fa-github"></i>
-                <span>githup</span>
+                <span>
+                  {{ 'projects.commonuse.code' | translate }}
+                </span>
               </a>
               <a
                 class="btn main__btn text-white"
                 href="{{ project.demo }}"
                 target="_blank"
               >
-                <i class="fa-solid fa-eye"></i> <span>demo</span>
+                <i class="fa-solid fa-eye"></i>
+                <span>
+                  {{ 'projects.commonuse.demo' | translate }}
+                </span>
               </a>
             </div>
           </div>

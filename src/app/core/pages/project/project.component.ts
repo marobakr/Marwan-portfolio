@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { MaintitleComponent } from 'src/app/shared/maintitle/maintitle.component';
 import { Projects } from '../../interfaces/projects';
 import { ProjectsService } from '../../services/projects.service';
@@ -7,7 +8,7 @@ import { ProjectsService } from '../../services/projects.service';
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [CommonModule, MaintitleComponent],
+  imports: [CommonModule, MaintitleComponent, TranslateModule],
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
   providers: [ProjectsService],
@@ -50,5 +51,8 @@ export class ProjectComponent implements OnInit {
     this.jquery = word === 'jquery';
     this.frameworks = word === 'frameworks';
     this.crude = word === 'crude';
+  }
+  getTranslationKey(index: number): string {
+    return `projects.project_${index + 1}.description`;
   }
 }

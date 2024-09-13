@@ -5,7 +5,8 @@
       class="btn main__btn text-capitalize text-white mb-5"
       [href]="pdfSrc"
     >
-      <i class="fa-solid fa-download px-1"></i> <span>download CV</span>
+      <i class="fa-solid fa-download px-1"></i>
+      <span> {{ 'resume.download' | translate }}</span>
     </a>
     <div class="resume__pdf">
       <pdf-viewer
@@ -34,7 +35,8 @@
         [href]="pdfSrc"
         target="_blank"
       >
-        <i class="fa-solid fa-print px-1"></i> <span>print CV</span>
+        <i class="fa-solid fa-print px-1"></i>
+        <span>{{ 'resume.print' | translate }}</span>
       </a>
     </div>
   </div>

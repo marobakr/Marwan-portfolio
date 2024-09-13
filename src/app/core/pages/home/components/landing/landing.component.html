@@ -6,24 +6,25 @@
       <div class="col-md-6">
         <div class="landing__heading">
           <h1 class="text-white text-capitalize pb-3">
-            Hi There!
+            {{ 'landing.greeting' | translate }}
             <span class="landing__wave" role="img" aria-labelledby="wave"
               >👋🏻</span
             >
           </h1>
           <h2 class="h1 pb-3 text-white">
-            I'M<strong class="heading-color text-uppercase">
-              marwan abubakr</strong
-            >
+            {{ 'landing.introduction' | translate }}
+            <strong class="heading-color text-uppercase">
+              {{ 'landing.name' | translate }}
+            </strong>
           </h2>
           <ngx-typed-js
             *ngIf="isBrowser"
             class="landing__type text-capitalize heading-color"
             [strings]="[
-              'Software Engineer',
-              'Front End Angular +2',
-              'Freelancer',
-              'Open Source Contributor'
+              'landing.roles.softwareEngineer' | translate,
+              'landing.roles.frontEndAngular' | translate,
+              'landing.roles.freelancer' | translate,
+              'landing.roles.backEndDotNetCore' | translate
             ]"
             [loop]="true"
             [showCursor]="true"
@@ -36,7 +37,7 @@
       </div>
       <div class="col-md-6">
         <figure class="mb-0">
-          <img class="w-100" src="./assets/home-main.svg" alt="" />
+          <img class="w-100" src="./assets/main-images/home-main.svg" alt="" />
         </figure>
       </div>
     </div>

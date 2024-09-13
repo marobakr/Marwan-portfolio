@@ -1,14 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "variables";
-@import "keyframes";
-@import "btns";
-@import "placeholders";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'variables';
+@import 'keyframes';
+@import 'btns';
+@import 'placeholders';
 
 body {
   /* Text */
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -68,4 +67,13 @@ body {
 
   /* Color */
   background-color: $popular-color;
+}
+
+html[lang='ar'] ul.navbar__links {
+  margin-right: auto;
+  padding: 10px;
+}
+
+html[lang='en'] ul.navbar__links {
+  margin-left: auto;
 }

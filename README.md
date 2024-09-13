@@ -3,17 +3,14 @@
   <a href="https://marwan-portfolio-nu.vercel.app/home" target="_blank">Marwan Abubakr Portfolio</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="./src/assets/readme-img.png" />
+  <img alt="Demo" src="./src/assets/main-images/readme-img.png" />
 </div>
 <br/>
 
 <center>
 
-
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-
-
 
 </center>
 
@@ -58,4 +55,3 @@ You will find all the components used and you can edit your information accordin
 ### Show your support
 
 Give a ⭐ if you like this website!
-

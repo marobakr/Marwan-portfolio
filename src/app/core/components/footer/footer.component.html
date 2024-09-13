@@ -3,8 +3,18 @@
     <div
       class="innner text-white d-flex justify-content-center justify-content-lg-between align-items-center flex-wrap gap-4"
     >
-      <p class="mb-0">Developed by Marwan Abubakr</p>
-      <p class="mb-0 px-5">Copyright &copy; {{ cuurentData | date }}</p>
+      <p class="mb-0">{{ 'footer.developedBy' | translate }}</p>
+
+      <p class="mb-0 px-5 d-flex">
+        <span>
+          {{ 'footer.copyright' | translate }}
+        </span>
+        <span class="mx-1"> &copy; </span>
+
+        <span>
+          {{ currentData | date }}
+        </span>
+      </p>
       <div
         class="icons px-5 d-flex justify-content-center align-items-center gap-4"
       >
