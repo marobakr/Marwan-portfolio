@@ -1,18 +1,24 @@
-import { APP_INITIALIZER, isDevMode } from '@angular/core';
+import { APP_INITIALIZER } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { inject } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 import { AppModule } from './app/app.module';
+
+export function initializeApp(): () => Promise<void> {
+  return (): Promise<void> =>
+    new Promise<void>((resolve) => {
+      // Inject Speed Insights
+      injectSpeedInsights();
+      resolve();
+    });
+}
 
 platformBrowserDynamic()
   .bootstrapModule(AppModule, {
     providers: [
       {
         provide: APP_INITIALIZER,
-        useFactory: () => () => {
-          inject({ mode: isDevMode() ? 'development' : 'production' });
-        },
+        useFactory: initializeApp,
         multi: true,
-        
       },
     ],
   })
