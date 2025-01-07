@@ -1,0 +1,37 @@
+<div class="notion-card">
+  <div class="mb-5">
+    <app-maintitle [popular]="typeOfCard" class="mb-0">
+      <span class="before text-capitalize">
+        {{ 'notion.labelTitle' | translate }}
+      </span>
+    </app-maintitle>
+    <p class="text-center text-white s">
+      {{ 'notion.disc' | translate }}
+    </p>
+  </div>
+
+  <div class="row gx-3 gy-5 justify-content-center">
+    <div
+      *ngFor="let notionItem of notionCards"
+      class="col-md-6 col-lg-4 col-xl-3"
+    >
+      <div class="card border-0">
+        <img
+          src="{{ notionItem.coverImage }}"
+          class="card-img-top"
+          [alt]="notionItem.description"
+        />
+        <div class="card-body text-black">
+          <h5 class="card-title">{{ notionItem.title }}</h5>
+          <p class="card-text">{{ notionItem.description }}</p>
+          <a
+            [href]="baseUrlNotion + notionItem.url"
+            class="btn fw-semibold text-white text-capitalize w-100"
+            target="_blank"
+            >{{ 'notion.Access' | translate }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

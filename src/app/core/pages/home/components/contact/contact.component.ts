@@ -22,16 +22,3 @@ export class ContactComponent implements OnInit {
     }
   }
 }
-
-/* 
-
-     "wantToLearn": "وأرغب في تعلم",
-      "otherTechnologies": "تقنيات أخرى",
-      "like": "مثل",
-      "exampleLike": "مثل",
-      "likeToWork": "وأحب العمل على",
-      "teamProjects": "المشاريع الجماعية",
-      "meetNew": "والتعرف على أشخاص جدد",
-      "learnNew": "وتعلم أشياء جديدة",
-      "challenges": "وتحديات جديدة"
-*/

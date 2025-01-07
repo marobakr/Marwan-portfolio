@@ -1,0 +1,176 @@
+<section>
+  <div class="container">
+    <div class="mb-5">
+      <app-maintitle [popular]="'notion.Resources' | translate" class="mb-0">
+        <span class="before text-capitalize">
+          {{ 'notion.explore' | translate }}
+        </span>
+      </app-maintitle>
+      <p class="text-center text-white">
+        {{ 'notion.disc' | translate }}
+      </p>
+    </div>
+    <div class="row g-4 gy-5">
+      <div class="col-md-6 col-lg-3 offset-lg-1">
+        <div class="card border-0">
+          <img
+            src="./assets/notion/download.png"
+            class="card-img-top"
+            alt="all Javascript resources"
+          />
+          <div class="card-body text-black">
+            <h5 class="card-title">Javascript</h5>
+            <p class="card-text text-capitalize">
+              {{ 'notion.explore.all' | translate }} JavaScript
+            </p>
+            <a
+              class="btn main__btn text-white fw-semibold text-capitalize w-100"
+              [routerLink]="['JavaScript']"
+            >
+              View</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 offset-lg-1">
+        <div class="card border-0">
+          <img
+            src="./assets/notion/angular.png"
+            class="card-img-top"
+            alt="all angular resources"
+          />
+          <div class="card-body text-black">
+            <h5 class="card-title">Angular 16,17</h5>
+            <p class="card-text text-capitalize">
+              {{ 'notion.explore.all' | translate }} Angular
+            </p>
+            <a
+              class="btn main__btn text-white fw-semibold text-capitalize w-100"
+              [routerLink]="['Angular']"
+            >
+              View</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 offset-lg-1">
+        <div class="card border-0">
+          <img
+            src="./assets/notion/TS2.png"
+            class="card-img-top"
+            alt="all TypeScript resources"
+          />
+          <div class="card-body text-black">
+            <h5 class="card-title">TypeScript</h5>
+            <p class="card-text text-capitalize">
+              {{ 'notion.explore.all' | translate }} TypeScript
+            </p>
+            <a
+              [href]="getUrlByKey('TypeScript')"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn main__btn text-white fw-semibold text-capitalize w-100"
+            >
+              View</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 offset-lg-1">
+        <div class="card border-0">
+          <img
+            src="./assets/notion/unite.png"
+            class="card-img-top"
+            alt="all SCSS resources"
+          />
+          <div class="card-body text-black">
+            <h5 class="card-title">Unit-Testing</h5>
+            <p class="card-text text-capitalize">
+              {{ 'notion.explore.all' | translate }} Unit-Testing
+            </p>
+            <a
+              [href]="getUrlByKey('UnitTesting')"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn main__btn text-white fw-semibold text-capitalize w-100"
+            >
+              View</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 offset-lg-1">
+        <div class="card border-0">
+          <img
+            src="./assets/notion/githup.png"
+            class="card-img-top"
+            alt="all angular resources"
+          />
+          <div class="card-body text-black">
+            <h5 class="card-title">Git&Githup</h5>
+            <p class="card-text text-capitalize">
+              {{ 'notion.explore.all' | translate }} Git&Githup
+            </p>
+            <a
+              [href]="getUrlByKey('Githup')"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn main__btn text-white fw-semibold text-capitalize w-100"
+            >
+              View</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 offset-lg-1">
+        <div class="card border-0">
+          <img
+            src="./assets/notion/scss01.jpg"
+            class="card-img-top"
+            alt="all SCSS resources"
+          />
+          <div class="card-body text-black">
+            <h5 class="card-title">SCSS</h5>
+            <p class="card-text text-capitalize">
+              {{ 'notion.explore.all' | translate }} SCSS
+            </p>
+            <a
+              [href]="getUrlByKey('SCSS')"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn main__btn text-white fw-semibold text-capitalize w-100"
+            >
+              View</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 offset-lg-1">
+        <div class="card border-0">
+          <img
+            src="./assets/notion/Csharp.png"
+            class="card-img-top"
+            alt="all angular resources"
+          />
+          <div class="card-body text-black">
+            <h5 class="card-title">Csharp</h5>
+            <p class="card-text text-capitalize">
+              {{ 'notion.explore.all' | translate }} C#
+            </p>
+            <a
+              [routerLink]="['CSharp']"
+              class="btn main__btn text-white fw-semibold text-capitalize w-100"
+            >
+              View</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
