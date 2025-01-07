@@ -30,6 +30,20 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'developer-docs',
+    loadComponent: () =>
+      import('./core/pages/resources/resources.component').then(
+        (m) => m.ResourcesComponent
+      ),
+  },
+  {
+    path: 'developer-docs/:type',
+    loadComponent: () =>
+      import(
+        './core/pages/specific-resources/specific-resources.component'
+      ).then((m) => m.SpecificResourcesComponent),
+  },
+  {
     path: '**',
     loadComponent: () =>
       import('./core/pages/home/home.component').then((m) => m.HomeComponent),

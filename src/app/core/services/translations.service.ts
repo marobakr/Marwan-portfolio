@@ -15,30 +15,34 @@ export class TranslationsService {
   private readonly _translateService = inject(TranslateService);
   private _renderer2!: Renderer2;
   private readonly _platId = inject(PLATFORM_ID);
+  private isBrowser!: boolean;
 
   constructor(rendererFactory: RendererFactory2) {
+    this.isBrowser = isPlatformBrowser(this._platId); // Check once if it's the browser
     this._renderer2 = rendererFactory.createRenderer(null, null);
-
     /* Check if a language is already set in localStorage */
-    if (isPlatformBrowser(this._platId)) {
-      let savedLang = localStorage.getItem('lang');
+    if (this.isBrowser) {
+      const savedLang = localStorage.getItem('lang');
       if (savedLang) {
         /* Use the saved language */
         this._translateService.use(savedLang);
       } else {
-        /* Set the default language to 'ar' if no language is saved */
+        /* Set the default language to 'en' if no language is saved */
         this._translateService.setDefaultLang('en');
         localStorage.setItem('lang', 'en');
         this._translateService.use('en');
       }
       /* Change direction based on the language */
       this.changeDirection();
+    } else {
+      /* Set the default language to 'en' on the server side */
+      this._translateService.setDefaultLang('en');
     }
   }
 
   changeDirection(): void {
-    if (isPlatformBrowser(this._platId)) {
-      let savedLang = localStorage.getItem('lang');
+    if (this.isBrowser) {
+      const savedLang = localStorage.getItem('lang');
       if (savedLang === 'ar') {
         this._renderer2.setAttribute(document.documentElement, 'dir', 'rtl');
         this._renderer2.setAttribute(document.documentElement, 'lang', 'ar');
@@ -50,7 +54,7 @@ export class TranslationsService {
   }
 
   changeLang(lang: string): void {
-    if (isPlatformBrowser(this._platId)) {
+    if (this.isBrowser) {
       localStorage.setItem('lang', lang);
       this._translateService.use(lang);
       this.changeDirection();
